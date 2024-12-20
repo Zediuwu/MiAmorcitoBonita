@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden; /* Para evitar el scroll durante las animaciones */
+    animation: fadeIn 1s; /* Animación de entrada */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards; /* Animación de entrada */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff4d4d; /* Color rojo para el error */
+    animation: pulse 1.5s infinite; /* Animación de pulso */
+}
+
+p.animated-text {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    animation: fadeInUp 1s forwards; /* Animación de entrada */
+}
+
+.desesperado-image {
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    margin-top: 20px;
+    animation: crazyMove 0.5s infinite; /* Animación loca de movimiento */
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff69b4; /* Color para el texto de la parte inferior */
+    animation: fadeInUp 1s forwards; /* Animación de entrada */
+    animation-delay: 1s; /* Delay para que aparezca después del texto anterior */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes crazyMove {
+    0% {
+        transform: translate(0);
+    }
+    10% {
+        transform: translate(-150px, -50px); /* Mover a la izquierda y arriba */
+    }
+    20% {
+        transform: translate(150px, 50px); /* Mover a la derecha y abajo */
+    }
+    30% {
+        transform: translate(-100px, -30px); /* Mover a la izquierda y arriba */
+    }
+    40% {
+        transform: translate(100px, 30px); /* Mover a la derecha y abajo */
+    }
+    50% {
+        transform: translate(-50px, -10px); /* Mover a la izquierda y arriba */
+    }
+    60% {
+        transform: translate(50px, 10px); /* Mover a la derecha y abajo */
+    }
+    70% {
+        transform: translate(-25px, -5px); /* Mover a la izquierda y arriba */
+    }
+    80% {
+        transform: translate(25px, 5px); /* Mover a la derecha y abajo */
+    }
+    90% {
+        transform: translate(0); /* Regresar al centro */
+    }
+    100% {
+        transform: translate(0); /* Mantener en el centro */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,124 @@
+body {
+  font-family: 'Courier New', Courier, monospace; /* Cambia la fuente a Courier para un estilo llamativo */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #ff69b4;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.gallery {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto; /* Centra la galería */
+}
+
+.gallery h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* Asegura que el footer esté al final */
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery h1 {
+      font-size: 1.5rem;
+  }
+
+  .gallery-images {
+      gap: 8px;
+  }
+
+  .gallery-image {
+      width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery h1 {
+      font-size: 1.2rem;
+  }
+
+  .gallery-images {
+      gap: 6px;
+  }
+
+  .gallery-image {
+      width: 100px;
+  }
+}
+
+
+.header a {
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
